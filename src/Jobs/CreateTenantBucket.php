@@ -1,6 +1,6 @@
 <?php
 
-namespace Vidwan\TenantBuckets\Jobs;
+namespace Lanos\TenantBuckets\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -8,7 +8,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Stancl\Tenancy\Contracts\TenantWithDatabase;
-use Vidwan\TenantBuckets\Bucket;
+use Lanos\TenantBuckets\Bucket;
 
 class CreateTenantBucket implements ShouldQueue
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Vidwan\TenantBuckets\Bootstrappers;
+namespace Lanos\TenantBuckets\Bootstrappers;
 
 use Illuminate\Contracts\Foundation\Application;
 use Stancl\Tenancy\Contracts\TenancyBootstrapper;

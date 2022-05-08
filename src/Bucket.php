@@ -1,6 +1,6 @@
 <?php
 
-namespace Vidwan\TenantBuckets;
+namespace Lanos\TenantBuckets;
 
 use Aws\Credentials\Credentials;
 
@@ -9,10 +9,10 @@ use Aws\Credentials\CredentialProvider;
 use Aws\S3\S3Client;
 use Illuminate\Support\Facades\Log;
 use Stancl\Tenancy\Contracts\TenantWithDatabase;
-use Vidwan\TenantBuckets\Events\CreatedBucket;
-use Vidwan\TenantBuckets\Events\CreatingBucket;
-use Vidwan\TenantBuckets\Events\DeletedBucket;
-use Vidwan\TenantBuckets\Events\DeletingBucket;
+use Lanos\TenantBuckets\Events\CreatedBucket;
+use Lanos\TenantBuckets\Events\CreatingBucket;
+use Lanos\TenantBuckets\Events\DeletedBucket;
+use Lanos\TenantBuckets\Events\DeletingBucket;
 
 class Bucket
 {

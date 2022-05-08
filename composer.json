@@ -2,7 +2,7 @@
     "name": "lanos/vapor-tenant-buckets",
     "description": "Automatically Provision AWS S3 Buckets for tenants.",
     "keywords": [
-        "Vidwan Co.",
+        "Lanos Co.",
         "tenant-buckets",
         "Tenancy For Laravel",
         "tenancyforlaravel"
@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Vidwan\\TenantBuckets\\": "src"
+            "Lanos\\TenantBuckets\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vidwan\\TenantBuckets\\Tests\\": "tests"
+            "Lanos\\TenantBuckets\\Tests\\": "tests"
         }
     },
     "scripts": {

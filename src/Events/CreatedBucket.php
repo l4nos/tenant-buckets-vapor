@@ -1,6 +1,6 @@
 <?php
 
-namespace Vidwan\TenantBuckets\Events;
+namespace Lanos\TenantBuckets\Events;
 
 use Stancl\Tenancy\Events\Contracts\TenantEvent;
 
