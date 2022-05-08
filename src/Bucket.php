@@ -5,6 +5,7 @@ namespace Vidwan\TenantBuckets;
 use Aws\Credentials\Credentials;
 
 use Aws\Exception\AwsException;
+use Aws\Credentials\CredentialProvider;
 use Aws\S3\S3Client;
 use Illuminate\Support\Facades\Log;
 use Stancl\Tenancy\Contracts\TenantWithDatabase;
@@ -53,10 +54,7 @@ class Bucket
         ?bool $pathStyle = null
     ) {
         $this->tenant = $tenant;
-        $this->credentials = $credentials ?? new Credentials(
-            config('filesystems.disks.s3.key'),
-            config('filesystems.disks.s3.secret')
-        );
+        $this->credentials = $credentials ?? CredentialProivder::env();
         $this->region = $region ?? config('filesystems.disks.s3.region');
         $this->endpoint = $endpoint ?? config('filesystems.disks.s3.endpoint');
         $pathStyle = $pathStyle ?? config('filesystems.disks.s3.use_path_style_endpoint');

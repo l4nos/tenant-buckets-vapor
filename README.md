@@ -7,11 +7,7 @@ Automatically Provision AWS S3 Buckets for each tenant. It's an Extention for [s
 
 ## Credits
 
-This is a modified version of the vidwanco/tenant-buckets package, changed to run on Laravel Vapor. A simple fix applied for correctly inject the AWS credentials.
-
-## Install
-
-
+This is a modified version of the vidwanco/tenant-buckets package, changed to run on Laravel Vapor. A simple fix applied for correctly inject the AWS credentials in-line with Vapor requirements.
 
 ## Concept
 
