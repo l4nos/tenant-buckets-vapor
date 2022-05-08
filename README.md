@@ -1,9 +1,4 @@
-# Provision S3 Buckets for each tenant.
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/vidwan/tenant-buckets.svg?style=flat-square)](https://packagist.org/packages/vidwan/tenant-buckets)
-[![Tests](https://github.com/vidwanco/tenant-buckets/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/vidwanco/tenant-buckets/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/vidwan/tenant-buckets.svg?style=flat-square)](https://packagist.org/packages/vidwan/tenant-buckets)
-
-Automatically Provision AWS S3 Buckets for each tenant. It's an Extention for [stancl/tenancy](https://github.com/stancl/tenancy). For more details refer to [TenancyForLaravel](https://tenancyforlaravel.com/).
+Automatically Provision AWS S3 Buckets for each tenant. It's an Extension for [stancl/tenancy](https://github.com/stancl/tenancy). For more details refer to [TenancyForLaravel](https://tenancyforlaravel.com/).
 
 ## Credits
 
@@ -16,10 +11,7 @@ Then using a bootstrapper updating the bucket in config `filesystems.disks.s3.bu
 
 ### Roadmap
 
-- [x] Automatic Bucket Creation
-- [x] Selecting the created bucket during Tenancy Bootstrapping.
-- [ ] Deletion of Bucket when the Tenant is deleted.
-- [ ] Testing with Amazon S3 service.
+This repo may be discontinued if the changes provided are merged into the original package, at which point we recommend using the original package.
 
 > **Note:** I have still not tested this package under ***production*** environment or with a real AWS S3 Bucket. I have only tested it under ***development*** environment using [MinIO](https://min.io/). I will update this after testing it on AWS S3 Bucket with an additional section on AWS IAM Policy Setup for creating the buckets using `aws-sdk-php`. Untill then, if you have tested, a PR is welcome.
 
