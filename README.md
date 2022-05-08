@@ -6,6 +6,10 @@
 
 Automatically Provision AWS S3 Buckets for each tenant. It's an Extention for [stancl/tenancy](https://github.com/stancl/tenancy). For more details refer to [TenancyForLaravel](https://tenancyforlaravel.com/).
 
+## Credits
+
+This is a modified version of the package, changed to run on Laravel Vapor. A simple fix applied for correctly inject the AWS credentials.
+
 ## Concept
 
 The concept is simple. It is to automatically provison a new AWS S3 bucket for tenant on registration and update the same on the central database's tenant table & data coloumn under `tenant_bucket`.
