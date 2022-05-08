@@ -1,5 +1,4 @@
 # Provision S3 Buckets for each tenant.
-![Vidwan/Tenant-Buckets](https://banners.beyondco.de/Tenant%20Buckets.png?theme=dark&packageManager=composer+require&packageName=vidwan%2Ftenant-buckets&pattern=circuitBoard&style=style_1&description=Provision+S3+Buckets+for+tenants.&md=1&showWatermark=0&fontSize=100px&images=collection)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vidwan/tenant-buckets.svg?style=flat-square)](https://packagist.org/packages/vidwan/tenant-buckets)
 [![Tests](https://github.com/vidwanco/tenant-buckets/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/vidwanco/tenant-buckets/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/vidwan/tenant-buckets.svg?style=flat-square)](https://packagist.org/packages/vidwan/tenant-buckets)
@@ -8,7 +7,11 @@ Automatically Provision AWS S3 Buckets for each tenant. It's an Extention for [s
 
 ## Credits
 
-This is a modified version of the package, changed to run on Laravel Vapor. A simple fix applied for correctly inject the AWS credentials.
+This is a modified version of the vidwanco/tenant-buckets package, changed to run on Laravel Vapor. A simple fix applied for correctly inject the AWS credentials.
+
+## Install
+
+
 
 ## Concept
 
@@ -29,7 +32,7 @@ Then using a bootstrapper updating the bucket in config `filesystems.disks.s3.bu
 You can install the package via composer:
 
 ```bash
-composer require vidwan/tenant-buckets
+composer require lanos/vapor-tenant-buckets
 ```
 
 ## Usage
