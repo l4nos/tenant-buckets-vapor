@@ -6,8 +6,7 @@
         "Lanos Co.",
         "tenant-buckets",
         "Tenancy For Laravel",
-        "tenancyforlaravel",
-
+        "tenancyforlaravel"
     ],
     "homepage": "https://github.com/syn6UK/tenant-buckets-vapor",
     "license": "MIT",
