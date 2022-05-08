@@ -1,5 +1,5 @@
 {
-    "name": "vidwan/tenant-buckets",
+    "name": "lanos/vapor-tenant-buckets",
     "description": "Automatically Provision AWS S3 Buckets for tenants.",
     "keywords": [
         "Vidwan Co.",
@@ -7,13 +7,18 @@
         "Tenancy For Laravel",
         "tenancyforlaravel"
     ],
-    "homepage": "https://github.com/vidwan-co/tenant-buckets",
+    "homepage": "https://github.com/syn6UK/tenant-buckets-vapor",
     "license": "MIT",
     "authors": [
         {
             "name": "Shashwat Mishra",
             "email": "shashwat@vidwan.co",
             "role": "Developer"
+        },
+        {
+            "name": "Robert Lane",
+            "email": "rob@updev.agency",
+            "role": "BugFixer"
         }
     ],
     "require": {
