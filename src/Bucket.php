@@ -54,7 +54,7 @@ class Bucket
         ?bool $pathStyle = null
     ) {
         $this->tenant = $tenant;
-        $this->credentials = $credentials ?? CredentialProivder::env();
+        $this->credentials = $credentials ?? CredentialProvider::env();
         $this->region = $region ?? config('filesystems.disks.s3.region');
         $this->endpoint = $endpoint ?? config('filesystems.disks.s3.endpoint');
         $pathStyle = $pathStyle ?? config('filesystems.disks.s3.use_path_style_endpoint');
