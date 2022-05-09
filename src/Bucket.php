@@ -74,7 +74,7 @@ class Bucket
     {
         $bucketName = config('tenancy.filesystem.suffix_base').$this->tenant->getTenantKey();
 
-        return $this->createBucket($bucketName, $this->credentials);
+        return $this->createBucket($bucketName);
     }
 
     /**
@@ -94,11 +94,10 @@ class Bucket
      * Create a New Bucket
      *
      * @param string $name Name of the S3 Bucket
-     * @param Aws\Credentials\Credentials $credentials AWS Credentials Object
      * @access public
      * @return self $this
      */
-    public function createBucket(string $name, Credentials $credentials): self
+    public function createBucket(string $name): self
     {
         event(new CreatingBucket($this->tenant));
 
