@@ -53,8 +53,11 @@ class Bucket
         ?string $endpoint = null,
         ?bool $pathStyle = null
     ) {
+
+        $providrr = CredentialProvider::env();
+
         $this->tenant = $tenant;
-        $this->credentials = $credentials ?? CredentialProvider::env();
+        $this->credentials = $credentials ?? new Credentials(config('services.aws.key'), config('services.aws.secret'));
         $this->region = $region ?? config('filesystems.disks.s3.region');
         $this->endpoint = $endpoint ?? config('filesystems.disks.s3.endpoint');
         $pathStyle = $pathStyle ?? config('filesystems.disks.s3.use_path_style_endpoint');
@@ -100,7 +103,7 @@ class Bucket
         event(new CreatingBucket($this->tenant));
 
         $params = [
-            "credentials" => $credentials,
+            "credentials" => CredentialProvider::env(),
             "endpoint" => $this->endpoint,
             "region" => $this->region,
             "version" => $this->version,
