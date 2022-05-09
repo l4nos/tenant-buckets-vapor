@@ -1,5 +1,5 @@
 {
-    "name": "lanos/vapor-tenant-buckets",
+    "name": "lanos/vapor-tenant-buckets-new",
     "version": "1.0.0",
     "description": "Automatically Provision AWS S3 Buckets for tenants.",
     "keywords": [
