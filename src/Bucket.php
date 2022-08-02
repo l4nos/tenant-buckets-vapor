@@ -2,17 +2,17 @@
 
 namespace Lanos\TenantBuckets;
 
-use Aws\Credentials\Credentials;
-
-use Aws\Exception\AwsException;
 use Aws\Credentials\CredentialProvider;
+
+use Aws\Credentials\Credentials;
+use Aws\Exception\AwsException;
 use Aws\S3\S3Client;
 use Illuminate\Support\Facades\Log;
-use Stancl\Tenancy\Contracts\TenantWithDatabase;
 use Lanos\TenantBuckets\Events\CreatedBucket;
 use Lanos\TenantBuckets\Events\CreatingBucket;
 use Lanos\TenantBuckets\Events\DeletedBucket;
 use Lanos\TenantBuckets\Events\DeletingBucket;
+use Stancl\Tenancy\Contracts\TenantWithDatabase;
 
 class Bucket
 {
@@ -53,7 +53,6 @@ class Bucket
         ?string $endpoint = null,
         ?bool $pathStyle = null
     ) {
-
         $providrr = CredentialProvider::env();
 
         $this->tenant = $tenant;
@@ -116,6 +115,22 @@ class Bucket
                 'Bucket' => $name,
             ]);
             $this->createdBucketName = $name;
+
+            // SET CORS FOR PRE-SIGNED UPLOAD ACCESS
+            $client->putBucketCors([
+                'Bucket' => $name,
+                'CORSConfiguration' => [
+                    'CORSRules' => [
+                        [
+                            'AllowedHeaders' => ['*'],
+                            'AllowedMethods' => ['POST', 'GET', 'PUT', 'DELETE'],
+                            'AllowedOrigins' => ['*'],
+                            'ExposeHeaders' => [],
+                            'MaxAgeSeconds' => 3000,
+                        ],
+                    ],
+                ],
+            ]);
 
             // Update Tenant
             $this->tenant->tenant_bucket = $name;
