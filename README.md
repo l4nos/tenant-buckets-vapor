@@ -4,6 +4,8 @@ Automatically Provision AWS S3 Buckets for each tenant. It's an Extension for [s
 
 This is a modified version of the vidwanco/tenant-buckets package, changed to run on Laravel Vapor. A simple fix applied for correctly inject the AWS credentials in-line with Vapor requirements.
 
+Also, for larger files, Vapor must utilise presigned URLs and frontloading the files via the frontend, so a change has been made to enable the correct CORS policy on each bucket as it is created.
+
 ## Concept
 
 The concept is simple. It is to automatically provison a new AWS S3 bucket for tenant on registration and update the same on the central database's tenant table & data coloumn under `tenant_bucket`.
