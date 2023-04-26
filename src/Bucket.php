@@ -116,6 +116,16 @@ class Bucket
             ]);
             $this->createdBucketName = $name;
 
+            $client->putPublicAccessBlock([
+                'Bucket' => $name,
+                "PublicAccessBlockConfiguration" => [
+                    "BlockPublicAcls" => false,
+                    "IgnorePublicAcls" => false,
+                    "BlockPublicPolicy" => false,
+                    "RestrictPublicBuckets" => false,
+                ],
+            ]);
+
             // SET CORS FOR PRE-SIGNED UPLOAD ACCESS
             $client->putBucketCors([
                 'Bucket' => $name,
