@@ -116,6 +116,7 @@ class Bucket
             ]);
             $this->createdBucketName = $name;
 
+            // REMOVE PUBLIC ACCESS BLOCK
             $client->putPublicAccessBlock([
                 'Bucket' => $name,
                 "PublicAccessBlockConfiguration" => [
@@ -123,6 +124,17 @@ class Bucket
                     "IgnorePublicAcls" => false,
                     "BlockPublicPolicy" => false,
                     "RestrictPublicBuckets" => false,
+                ],
+            ]);
+
+            // ENABLE ACLS
+
+            $client->putBucketOwnershipControls([
+                'Bucket' => $name,
+                'OwnershipControls' => [
+                    "Rules" => [
+                        ["ObjectOwnership" => "BucketOwnerPreferred"],
+                    ],
                 ],
             ]);
 
