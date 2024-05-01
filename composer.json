@@ -1,9 +1,8 @@
 {
-    "name": "lanos/vapor-tenant-buckets-new",
-    "version": "1.0.3",
+    "name": "msucevan/vapor-tenant-buckets-new",
     "description": "Automatically Provision AWS S3 Buckets for tenants.",
     "keywords": [
-        "Lanos Co.",
+        "msucevan",
         "tenant-buckets",
         "Tenancy For Laravel",
         "tenancyforlaravel"
