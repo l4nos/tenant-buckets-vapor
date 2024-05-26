@@ -86,7 +86,7 @@ class Bucket
     {
         $bucketName = $this->tenant->tenant_bucket;
 
-        return $bucketName ? $this->deleteBucket($bucketName, $this->credentials) : false;
+        return $bucketName ? $this->deleteBucket($bucketName, $this->credentials) : $this;
     }
 
     /**
@@ -180,7 +180,7 @@ class Bucket
         event(new DeletingBucket($this->tenant));
 
         $params = [
-            "credentials" => $credentials,
+            "credentials" => CredentialProvider::env(),
             "endpoint" => $this->endpoint,
             "region" => $this->region,
             "version" => $this->version,
